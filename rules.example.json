@@ -1,0 +1,148 @@
+[
+  {
+    "name": "Hikvision",
+    "detect": [
+      {
+        "key": "hik."
+      }
+    ],
+    "manufacturer": "Hikvision",
+    "model": [
+      {
+        "key": "hik.model"
+      }
+    ],
+    "serial": [
+      {
+        "key": "hik.serial"
+      }
+    ],
+    "firmware": [
+      {
+        "key": "hik.firmware"
+      }
+    ]
+  },
+  {
+    "name": "MikroTik",
+    "detect": [
+      {
+        "key": "mikrotik."
+      }
+    ],
+    "manufacturer": "MikroTik",
+    "platform": "RouterOS",
+    "model": [
+      {
+        "key": "mikrotik.sysdescr",
+        "re": "^(?:RouterOS\\s+)?(.+)$"
+      }
+    ],
+    "firmware": [
+      {
+        "key": "mikrotik.version"
+      }
+    ]
+  },
+  {
+    "name": "Canon iR",
+    "detect": [
+      {
+        "key": "canon."
+      }
+    ],
+    "manufacturer": "Canon",
+    "model": [
+      {
+        "key": "canon.model"
+      }
+    ],
+    "serial": [
+      {
+        "key": "canon.serial"
+      }
+    ]
+  },
+  {
+    "name": "HP",
+    "detect": [
+      {
+        "key": "hp."
+      }
+    ],
+    "manufacturer": "HP",
+    "model": [
+      {
+        "key": "hp.model",
+        "re": "^(?:HP\\s+)?(.+)$"
+      }
+    ],
+    "serial": [
+      {
+        "key": "hp.serial"
+      }
+    ]
+  },
+  {
+    "name": "Printer",
+    "detect": [
+      {
+        "key": "printer."
+      }
+    ],
+    "manufacturer_from_model": true,
+    "model": [
+      {
+        "key": "printer.model",
+        "re": "^(.+?)(?:,|$)"
+      }
+    ],
+    "serial": [
+      {
+        "key": "printer.serial"
+      }
+    ],
+    "firmware": [
+      {
+        "key": "printer.firmware.main"
+      },
+      {
+        "key": "printer.model",
+        "re": "Firmware Ver\\.\\s*([\\d.]+)"
+      }
+    ]
+  },
+  {
+    "name": "Cisco SMB",
+    "detect": [
+      {
+        "key": "system.descr[sysDescr",
+        "value_re": "(?i)CBS|SG\\d|Catalyst|Cisco|C1[23]00"
+      }
+    ],
+    "manufacturer": "Cisco",
+    "model": [
+      {
+        "key": "system.hw.serialnumber[",
+        "from": "name",
+        "re": "^([^\\s:]+)"
+      }
+    ],
+    "serial": [
+      {
+        "key": "system.hw.serialnumber["
+      }
+    ]
+  },
+  {
+    "name": "Windows",
+    "detect": [
+      {
+        "key": "system.uname",
+        "value_re": "^Windows"
+      }
+    ],
+    "manufacturer": "Microsoft",
+    "platform_from_os": "^(Windows Server \\d+ \\w+)"
+  }
+]
