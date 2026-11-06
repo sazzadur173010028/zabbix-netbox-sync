@@ -152,7 +152,7 @@ Zabbix-এ যে ডিভাইস ও তথ্য আছে (নাম, IP, 
 নতুন সার্ভারে সেটআপ:
 
 ```bash
-git clone https://github.com/<you>/zabbix-netbox-sync.git && cd zabbix-netbox-sync
+git clone https://github.com/sazzadur173010028/zabbix-netbox-sync.git && cd zabbix-netbox-sync
 ./install.sh          # ~/.z2n.env বানাবে
 nano ~/.z2n.env       # URL ও টোকেন দিন (সব মান "..." এর ভেতরে)
 ./install.sh 30       # dry-run দেখাবে + প্রতি ৩০ মিনিটে cron বসাবে
