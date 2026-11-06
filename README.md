@@ -46,7 +46,7 @@ own in `rules.example.json` (see below).
 ## Quick start on a new server
 
 ```bash
-git clone https://github.com/<you>/zabbix-netbox-sync.git
+git clone https://github.com/sazzadur173010028/zabbix-netbox-sync.git
 cd zabbix-netbox-sync
 ./install.sh            # first run: creates ~/.z2n.env from the template
 nano ~/.z2n.env         # fill in URLs and tokens (all values in double quotes!)
